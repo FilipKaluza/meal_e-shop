@@ -1,13 +1,12 @@
-import { Input } from 'antd';
+import { forwardRef } from 'react';
 
-
-const StyledAntInput = props => {
+const StyledAntInput = forwardRef((props, ref) => {
     return(
         <div className="Input">
             <label htmlFor={props.input.id} > {props.label} </label>
-            <Input {...props.input} />
+            <input ref={ref} {...props.input} />
         </div>
     );
-};
+});
 
 export default StyledAntInput;
